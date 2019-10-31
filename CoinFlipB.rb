@@ -2,6 +2,13 @@ $userpoints = 0
 $computerpoints = 0
 
 def Coinflip
+  
+  if $userpoints >= 5
+    abort("You win this time!")
+  elsif $computerpoints >= 5
+    abort("Technology always wins in the end!")
+  end
+
     print "Heads or Tails?: "
     userGuess = gets.chomp
 
@@ -20,7 +27,7 @@ def Coinflip
         coin = "Tails"
     end
 
-    if coin.to_s == userGuess
+    if coin.upcase == userGuess.upcase
         print "The flip is " + coin.to_s + "! You win! \n"
         $userpoints += 1
     else
