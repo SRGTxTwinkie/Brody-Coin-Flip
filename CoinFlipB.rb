@@ -2,7 +2,7 @@ $userpoints = 0
 $computerpoints = 0
 
 def Coinflip
-  
+
   if $userpoints >= 5
     abort("You win this time!")
   elsif $computerpoints >= 5
@@ -17,7 +17,7 @@ def Coinflip
       ### If the user chose one of the answers
     else
       print "I said Heads or Tails, not '#{userGuess}' \n" ### You can remove this and do whatever, that was just what I was checking with
-      print "Try is again \n"
+      print "Try again \n"
       Coinflip()
     end
 
